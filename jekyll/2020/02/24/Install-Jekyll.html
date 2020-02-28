@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="shortcut icon" type="image/x-icon" href="/pages/favicon.ico"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Jekyll的安装记录 | ZTYUIO</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Jekyll的安装记录" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="起因 事情是这么个事情，从 https://github.com/fastai/fastpages 这里克隆来的博客。想要进行一些修改，但是最近github连接有些慢，于是试图下载Jekyll进行本地预览和修改。" />
+<meta property="og:description" content="起因 事情是这么个事情，从 https://github.com/fastai/fastpages 这里克隆来的博客。想要进行一些修改，但是最近github连接有些慢，于是试图下载Jekyll进行本地预览和修改。" />
+<link rel="canonical" href="https://ztyuio.github.io/pages/jekyll/2020/02/24/Install-Jekyll.html" />
+<meta property="og:url" content="https://ztyuio.github.io/pages/jekyll/2020/02/24/Install-Jekyll.html" />
+<meta property="og:site_name" content="ZTYUIO" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-24T00:00:00-06:00" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://ztyuio.github.io/pages/jekyll/2020/02/24/Install-Jekyll.html"},"description":"起因 事情是这么个事情，从 https://github.com/fastai/fastpages 这里克隆来的博客。想要进行一些修改，但是最近github连接有些慢，于是试图下载Jekyll进行本地预览和修改。","@type":"BlogPosting","url":"https://ztyuio.github.io/pages/jekyll/2020/02/24/Install-Jekyll.html","headline":"Jekyll的安装记录","dateModified":"2020-02-24T00:00:00-06:00","datePublished":"2020-02-24T00:00:00-06:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/pages/assets/main.css">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css"><link type="application/atom+xml" rel="alternate" href="https://ztyuio.github.io/pages/feed.xml" title="ZTYUIO" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement( document.body, {
+          delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "[%", right: "%]", display: true},
+            {left: "$", right: "$", display: false}
+          ]}
+        );
+      });
+    </script>
+  
+
+  <script>
+  function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+  }
+  window.onload = wrap_img;
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      // add link icon to anchor tags
+      var elem = document.querySelectorAll(".anchor-link")
+      elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+      // remove paragraph tags in rendered toc (happens from notebooks)
+      var toctags = document.querySelectorAll(".toc-entry")
+      toctags.forEach(e => (e.firstElementChild.innerText = e.firstElementChild.innerText.replace('¶', '')))
+    });
+  </script>
+</head><body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/pages/">ZTYUIO</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/pages/about/">About Me</a><a class="page-link" href="/pages/">Home Page</a><a class="page-link" href="/pages/search/">Search</a><a class="page-link" href="/pages/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Jekyll的安装记录</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2020-02-24T00:00:00-06:00" itemprop="datePublished">
+        Feb 24, 2020
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/pages/categories/#Jekyll">Jekyll</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h2"><a href="#起因">起因</a></li>
+<li class="toc-entry toc-h2"><a href="#经过">经过</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#1-安装jekyll">1. 安装Jekyll</a></li>
+<li class="toc-entry toc-h3"><a href="#2-没有权限加上sudo命令获取权限">2. 没有权限，加上sudo命令获取权限：</a></li>
+<li class="toc-entry toc-h3"><a href="#3-rubyrubi版本太低需要更新ruby">3. Ruby[/’rubi/]版本太低，需要更新Ruby</a></li>
+<li class="toc-entry toc-h3"><a href="#4-jekyll-not-found-将jekyll的地址加入环境变量">4. Jekyll not found. 将Jekyll的地址加入环境变量</a></li>
+<li class="toc-entry toc-h3"><a href="#5-bundlergemnotfound尝试安装依赖">5. Bundler::GemNotFound，尝试安装依赖</a></li>
+<li class="toc-entry toc-h3"><a href="#6-gemloaderror启动jekyll">6. Gem::LoadError，启动Jekyll</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#结果">结果</a></li>
+</ul><h2 id="起因">
+<a class="anchor" href="#%E8%B5%B7%E5%9B%A0" aria-hidden="true"><span class="octicon octicon-link"></span></a>起因</h2>
+<p>事情是这么个事情，从 <a href="https://github.com/fastai/fastpages">https://github.com/fastai/fastpages</a> 这里克隆来的博客。想要进行一些修改，但是最近github连接有些慢，于是试图下载Jekyll进行本地预览和修改。</p>
+
+<h2 id="经过">
+<a class="anchor" href="#%E7%BB%8F%E8%BF%87" aria-hidden="true"><span class="octicon octicon-link"></span></a>经过</h2>
+
+<h3 id="1-安装jekyll">
+<a class="anchor" href="#1-%E5%AE%89%E8%A3%85jekyll" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. 安装Jekyll</h3>
+<p>官网 <a href="https://jekyll.com.cn">jekyll.com.cn</a> 步骤很简单，在macOS下使用命令：</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>bundler jekyll
+</code></pre></div></div>
+<p>用gem安装bundler和jekyll。
+<strong>出现第一个问题：</strong></p>
+<blockquote>
+  <p>You don’t have write permissions for the /Library/Ruby/Gems/2.3.0 directory.</p>
+</blockquote>
+
+<h3 id="2-没有权限加上sudo命令获取权限">
+<a class="anchor" href="#2-%E6%B2%A1%E6%9C%89%E6%9D%83%E9%99%90%E5%8A%A0%E4%B8%8Asudo%E5%91%BD%E4%BB%A4%E8%8E%B7%E5%8F%96%E6%9D%83%E9%99%90" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. 没有权限，加上sudo命令获取权限：</h3>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>gem <span class="nb">install </span>bundler jekyll
+</code></pre></div></div>
+<p>输入密码继续操作。
+<strong>出现第二个问题：</strong></p>
+<blockquote>
+  <p>ERROR:  Error installing jekyll:
+jekyll-sass-converter requires Ruby version &gt;= 2.4.0.</p>
+</blockquote>
+
+<h3 id="3-rubyrubi版本太低需要更新ruby">
+<a class="anchor" href="#3-rubyrubi%E7%89%88%E6%9C%AC%E5%A4%AA%E4%BD%8E%E9%9C%80%E8%A6%81%E6%9B%B4%E6%96%B0ruby" aria-hidden="true"><span class="octicon octicon-link"></span></a>3. Ruby[/’rubi/]版本太低，需要更新Ruby</h3>
+<p>我这里使用homebrew进行Ruby的更新，还有其他工具可以使用。</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>ruby
+</code></pre></div></div>
+<p>反馈：</p>
+<blockquote>
+  <p>If you need to have ruby first in your PATH run:
+    echo ‘export PATH=”/usr/local/opt/ruby/bin:$PATH”’ » ~/.bash_profile</p>
+
+  <p>For compilers to find ruby you may need to set:
+    export LDFLAGS=”-L/usr/local/opt/ruby/lib”
+    export CPPFLAGS=”-I/usr/local/opt/ruby/include”</p>
+</blockquote>
+
+<p>按照提示输入命令，然后输入</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">source</span> ~/.bash_profile
+</code></pre></div></div>
+<p>在当前环境下读取并执行文件。
+<strong>仍然出现问题：</strong>
+输入</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll <span class="nt">-v</span>
+</code></pre></div></div>
+<p>试图查看jekyll版本信息，显示jekyll not found.</p>
+
+<h3 id="4-jekyll-not-found-将jekyll的地址加入环境变量">
+<a class="anchor" href="#4-jekyll-not-found-%E5%B0%86jekyll%E7%9A%84%E5%9C%B0%E5%9D%80%E5%8A%A0%E5%85%A5%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F" aria-hidden="true"><span class="octicon octicon-link"></span></a>4. Jekyll not found. 将Jekyll的地址加入环境变量</h3>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">env</span>
+</code></pre></div></div>
+<p>查看gem的环境相关信息。
+找到一条</p>
+<blockquote>
+  <p>INSTALLATION DIRECTORY: /usr/local/lib/ruby/gems/2.6.0</p>
+</blockquote>
+
+<p>在这个目录里找到Jekyll的文件地址，按照上面一条命令的格式将Jekyll的地址加入环境变量</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">echo</span> <span class="s1">'/usr/local/lib/ruby/gems/2.6.0/gems/jekyll-4.0.0/exe:$PATH"'</span> <span class="o">&gt;&gt;</span> ~/.bash_profile
+ <span class="nb">source</span> ~/.bash_profile
+</code></pre></div></div>
+<p><strong>第四个问题</strong>
+输入Jekyll仍然出错</p>
+<blockquote>
+  <p>`block in verify_gemfile_dependencies_are_found!’: Could not find gem ‘jekyll-toc’ in any of the gem sources listed in your Gemfile. (Bundler::GemNotFound)</p>
+</blockquote>
+
+<h3 id="5-bundlergemnotfound尝试安装依赖">
+<a class="anchor" href="#5-bundlergemnotfound%E5%B0%9D%E8%AF%95%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96" aria-hidden="true"><span class="octicon octicon-link"></span></a>5. Bundler::GemNotFound，尝试安装依赖</h3>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install</span>
+</code></pre></div></div>
+<p><strong>第五个问题</strong></p>
+<blockquote>
+  <p>You have already activated concurrent-ruby 1.1.6, but your Gemfile requires concurrent-ruby 1.1.5. Prepending <code class="language-plaintext highlighter-rouge">bundle exec</code> to your command may solve this. (Gem::LoadError)</p>
+</blockquote>
+
+<h3 id="6-gemloaderror启动jekyll">
+<a class="anchor" href="#6-gemloaderror%E5%90%AF%E5%8A%A8jekyll" aria-hidden="true"><span class="octicon octicon-link"></span></a>6. Gem::LoadError，启动Jekyll</h3>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">exec </span>jekyll serve
+</code></pre></div></div>
+<p>bundle exec 表示在当前项目依赖的上下文环境中执行命令 jekyll serve。</p>
+
+<p>成功启动。</p>
+
+<blockquote>
+  <p>Server address: http://127.0.0.1:4000</p>
+</blockquote>
+
+<h2 id="结果">
+<a class="anchor" href="#%E7%BB%93%E6%9E%9C" aria-hidden="true"><span class="octicon octicon-link"></span></a>结果</h2>
+
+<p>一个简单的程序下载和环境配置的过程。</p>
+
+<p>一个问题，push（每次更改竟然需要三分钟）到github之后toc自动标题不起作用。
+comments起作用，但是toc和tags都没有起作用。</p>
+
+<p>0207更新</p>
+
+<p>按照fastpages的要求重新建立仓库，获得了可见的成果。</p>
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="ztyuio/pages"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/pages/jekyll/2020/02/24/Install-Jekyll.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/pages/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">ZTYUIO</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">ZTYUIO</li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list">
+  <li><a href="https://github.com/ztyuio"><svg class="social svg-icon"><use xlink:href="/pages/assets/minima-social-icons.svg#github"></use></svg> <span class="username">ztyuio</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>The quick brwon fox jumps over a lazy dog.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

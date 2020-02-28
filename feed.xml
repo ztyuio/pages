@@ -1,4 +1,180 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://ztyuio.github.io/pages/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ztyuio.github.io/pages/" rel="alternate" type="text/html" /><updated>2020-02-27T04:18:32-06:00</updated><id>https://ztyuio.github.io/pages/feed.xml</id><title type="html">fastpages</title><subtitle>An easy to use blogging platform with support for Jupyter Notebooks.</subtitle><entry><title type="html">Fastpages Notebook Blog Post</title><link href="https://ztyuio.github.io/pages/fastpages/jupyter/2020/02/20/test.html" rel="alternate" type="text/html" title="Fastpages Notebook Blog Post" /><published>2020-02-20T00:00:00-06:00</published><updated>2020-02-20T00:00:00-06:00</updated><id>https://ztyuio.github.io/pages/fastpages/jupyter/2020/02/20/test</id><content type="html" xml:base="https://ztyuio.github.io/pages/fastpages/jupyter/2020/02/20/test.html">&lt;!--
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://ztyuio.github.io/pages/feed.xml" rel="self" type="application/atom+xml" /><link href="https://ztyuio.github.io/pages/" rel="alternate" type="text/html" /><updated>2020-02-28T02:34:02-06:00</updated><id>https://ztyuio.github.io/pages/feed.xml</id><title type="html">ZTYUIO</title><subtitle>The quick brwon fox jumps over a lazy dog.</subtitle><entry><title type="html">Update Records</title><link href="https://ztyuio.github.io/pages/2020/02/28/Update-Records.html" rel="alternate" type="text/html" title="Update Records" /><published>2020-02-28T00:00:00-06:00</published><updated>2020-02-28T00:00:00-06:00</updated><id>https://ztyuio.github.io/pages/2020/02/28/Update-Records</id><content type="html" xml:base="https://ztyuio.github.io/pages/2020/02/28/Update-Records.html">&lt;p&gt;一些修改记录&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;0227-init&quot;&gt;0227 Init&lt;/h2&gt;
+
+&lt;h2 id=&quot;0228-修改search界面使得搜索功能正常页面准确跳转&quot;&gt;0228 修改Search界面，使得搜索功能正常，页面准确跳转&lt;/h2&gt;
+
+&lt;p&gt;添加了若干个{{baseurl}}&lt;/p&gt;
+
+&lt;h2 id=&quot;0208-添加一个主页按钮&quot;&gt;0208 添加一个主页按钮&lt;/h2&gt;
+
+&lt;p&gt;编写页面，在头部加上&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;title:TitleName&lt;/code&gt;即可&lt;/p&gt;</content><author><name></name></author><summary type="html">一些修改记录</summary></entry><entry><title type="html">使用fastpages模板过程中遇到的一些问题</title><link href="https://ztyuio.github.io/pages/jekyll/2020/02/28/Jekyll-Error.html" rel="alternate" type="text/html" title="使用fastpages模板过程中遇到的一些问题" /><published>2020-02-28T00:00:00-06:00</published><updated>2020-02-28T00:00:00-06:00</updated><id>https://ztyuio.github.io/pages/jekyll/2020/02/28/Jekyll-Error</id><content type="html" xml:base="https://ztyuio.github.io/pages/jekyll/2020/02/28/Jekyll-Error.html">&lt;h2 id=&quot;search页面读取不到相应的js文件&quot;&gt;Search页面读取不到相应的JS文件：&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ERROR ‘/assets/js/vendor/lunr.min.js’ not found.
+ERROR ‘/assets/js/search.js’ not found.
+ERROR ‘/assets/js/vendor/lunr.min.js’ not found.
+ERROR ‘/assets/js/search.js’ not found.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;解决办法&quot;&gt;解决办法&lt;/h3&gt;
+
+&lt;p&gt;在search.html中找到了引用js的代码&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/assets/js/vendor/lunr.min.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/script&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/assets/js/search.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/script&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;地址直接引用导致找不到，在地址之前加上{{ site.baseurl }}&lt;/p&gt;
+
+&lt;p&gt;之后Search页面可以成功读取到Js文件。&lt;/p&gt;
+
+&lt;h2 id=&quot;search页面搜索功能很奇怪&quot;&gt;Search页面搜索功能很奇怪：&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;只支持英文检索&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;搜索获得的页面因为permalink设置的关系，跳转不正确&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;没有修改之前跳转的地址是&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;http://localhost:4000/jekyll/Jekyll-Error.html&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;​		实际文档的（permalink默认地址）是&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;http://localhost:4000/pages/jekyll/Jekyll-Error.html&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;​	缺了一个{ site.baseurl }&lt;/p&gt;
+
+&lt;p&gt;由此可知（0208）前两天更新的这个Search的作者没有考虑到baseurl的问题。&lt;/p&gt;
+
+&lt;h3 id=&quot;解决办法-1&quot;&gt;解决办法&lt;/h3&gt;
+
+&lt;p&gt;找到search.js，有几个地方有代码&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“url”: “{{ site.url }}{{ page.url }}”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;在其中插入了 {{ site.baseurl }}&lt;/p&gt;
+
+&lt;p&gt;(这里因为有双引号所以在原始文档加上了反斜杠进行转义)&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“url”: “{{ site.url }}{{ site.baseurl }}{{ page.url }}”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;最后在Search页面得到了想要的结果。&lt;/p&gt;
+
+&lt;h3 id=&quot;待解决&quot;&gt;待解决&lt;/h3&gt;
+
+&lt;p&gt;lunr.js 的中文检索。&lt;/p&gt;</content><author><name></name></author><summary type="html">Search页面读取不到相应的JS文件：</summary></entry><entry><title type="html">Jekyll的安装记录</title><link href="https://ztyuio.github.io/pages/jekyll/2020/02/24/Install-Jekyll.html" rel="alternate" type="text/html" title="Jekyll的安装记录" /><published>2020-02-24T00:00:00-06:00</published><updated>2020-02-24T00:00:00-06:00</updated><id>https://ztyuio.github.io/pages/jekyll/2020/02/24/Install-Jekyll</id><content type="html" xml:base="https://ztyuio.github.io/pages/jekyll/2020/02/24/Install-Jekyll.html">&lt;h2 id=&quot;起因&quot;&gt;起因&lt;/h2&gt;
+&lt;p&gt;事情是这么个事情，从 &lt;a href=&quot;https://github.com/fastai/fastpages&quot;&gt;https://github.com/fastai/fastpages&lt;/a&gt; 这里克隆来的博客。想要进行一些修改，但是最近github连接有些慢，于是试图下载Jekyll进行本地预览和修改。&lt;/p&gt;
+
+&lt;h2 id=&quot;经过&quot;&gt;经过&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-安装jekyll&quot;&gt;1. 安装Jekyll&lt;/h3&gt;
+&lt;p&gt;官网 &lt;a href=&quot;https://jekyll.com.cn&quot;&gt;jekyll.com.cn&lt;/a&gt; 步骤很简单，在macOS下使用命令：&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;bundler jekyll
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;用gem安装bundler和jekyll。
+&lt;strong&gt;出现第一个问题：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;You don’t have write permissions for the /Library/Ruby/Gems/2.3.0 directory.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;2-没有权限加上sudo命令获取权限&quot;&gt;2. 没有权限，加上sudo命令获取权限：&lt;/h3&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;bundler jekyll
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;输入密码继续操作。
+&lt;strong&gt;出现第二个问题：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;ERROR:  Error installing jekyll:
+jekyll-sass-converter requires Ruby version &amp;gt;= 2.4.0.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;3-rubyrubi版本太低需要更新ruby&quot;&gt;3. Ruby[/’rubi/]版本太低，需要更新Ruby&lt;/h3&gt;
+&lt;p&gt;我这里使用homebrew进行Ruby的更新，还有其他工具可以使用。&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;brew &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;ruby
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;反馈：&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;If you need to have ruby first in your PATH run:
+    echo ‘export PATH=”/usr/local/opt/ruby/bin:$PATH”’ » ~/.bash_profile&lt;/p&gt;
+
+  &lt;p&gt;For compilers to find ruby you may need to set:
+    export LDFLAGS=”-L/usr/local/opt/ruby/lib”
+    export CPPFLAGS=”-I/usr/local/opt/ruby/include”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;按照提示输入命令，然后输入&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.bash_profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;在当前环境下读取并执行文件。
+&lt;strong&gt;仍然出现问题：&lt;/strong&gt;
+输入&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;试图查看jekyll版本信息，显示jekyll not found.&lt;/p&gt;
+
+&lt;h3 id=&quot;4-jekyll-not-found-将jekyll的地址加入环境变量&quot;&gt;4. Jekyll not found. 将Jekyll的地址加入环境变量&lt;/h3&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem &lt;span class=&quot;nb&quot;&gt;env&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;查看gem的环境相关信息。
+找到一条&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;INSTALLATION DIRECTORY: /usr/local/lib/ruby/gems/2.6.0&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;在这个目录里找到Jekyll的文件地址，按照上面一条命令的格式将Jekyll的地址加入环境变量&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/usr/local/lib/ruby/gems/2.6.0/gems/jekyll-4.0.0/exe:$PATH&quot;'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; ~/.bash_profile
+ &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.bash_profile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;第四个问题&lt;/strong&gt;
+输入Jekyll仍然出错&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;`block in verify_gemfile_dependencies_are_found!’: Could not find gem ‘jekyll-toc’ in any of the gem sources listed in your Gemfile. (Bundler::GemNotFound)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;5-bundlergemnotfound尝试安装依赖&quot;&gt;5. Bundler::GemNotFound，尝试安装依赖&lt;/h3&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;第五个问题&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;You have already activated concurrent-ruby 1.1.6, but your Gemfile requires concurrent-ruby 1.1.5. Prepending &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle exec&lt;/code&gt; to your command may solve this. (Gem::LoadError)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;6-gemloaderror启动jekyll&quot;&gt;6. Gem::LoadError，启动Jekyll&lt;/h3&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;bundle exec 表示在当前项目依赖的上下文环境中执行命令 jekyll serve。&lt;/p&gt;
+
+&lt;p&gt;成功启动。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Server address: http://127.0.0.1:4000&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;结果&quot;&gt;结果&lt;/h2&gt;
+
+&lt;p&gt;一个简单的程序下载和环境配置的过程。&lt;/p&gt;
+
+&lt;p&gt;一个问题，push（每次更改竟然需要三分钟）到github之后toc自动标题不起作用。
+comments起作用，但是toc和tags都没有起作用。&lt;/p&gt;
+
+&lt;p&gt;0207更新&lt;/p&gt;
+
+&lt;p&gt;按照fastpages的要求重新建立仓库，获得了可见的成果。&lt;/p&gt;</content><author><name></name></author><summary type="html">起因 事情是这么个事情，从 https://github.com/fastai/fastpages 这里克隆来的博客。想要进行一些修改，但是最近github连接有些慢，于是试图下载Jekyll进行本地预览和修改。</summary></entry><entry><title type="html">Fastpages Notebook Blog Post</title><link href="https://ztyuio.github.io/pages/fastpages/jupyter/2020/02/20/test.html" rel="alternate" type="text/html" title="Fastpages Notebook Blog Post" /><published>2020-02-20T00:00:00-06:00</published><updated>2020-02-20T00:00:00-06:00</updated><id>https://ztyuio.github.io/pages/fastpages/jupyter/2020/02/20/test</id><content type="html" xml:base="https://ztyuio.github.io/pages/fastpages/jupyter/2020/02/20/test.html">&lt;!--
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
