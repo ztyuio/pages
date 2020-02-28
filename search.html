@@ -7,9 +7,10 @@ search: exclude
 
 <!-- adapted from https://jekyllcodex.org/without-plugin/search-lunr/ -->
 
-<script src="/assets/js/vendor/lunr.min.js"></script>
-<script src="/assets/js/search.js"></script>
+<script src="{{ site.baseurl }}/assets/js/vendor/lunr.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/search.js"></script>
 
+<div>站内搜索，全词检索，不支持中文搜索。</div><br/>
 <form onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
     <p><input type="text" class="form-control input-block form-control" id="lunrsearch" name="q" maxlength="500" value="" placeholder="Search" /></p>
 </form>
